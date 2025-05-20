@@ -17,7 +17,7 @@ public class UserService(IUserRepository userRepository, IPasswordHasher passwor
         var user = new User
         {
             Login = userDto.Login,
-            Password = _passwordHasher.HashPassword(userDto.Password),
+            Password = userDto.Password,
             Name = userDto.Name,
             Gender = userDto.Gender,
             Birthday = userDto.Birthday,
